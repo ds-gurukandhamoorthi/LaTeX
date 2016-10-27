@@ -1,0 +1,60 @@
+\documentclass{article}
+
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amssymb,mathrsfs}
+
+\newcommand{\fonca}{x \ln x}
+\newcommand{\foncb}{\ln(1+2x)}
+\newcommand{\foncc}{x \ln x}
+\newcommand{\foncd}{\sqrt{x^2+3x}\ln(x^2)}
+\newcommand{\fonce}{\frac{1}{x+1}}
+\newcommand{\foncf}{\ln(1+\frac{1}{x})}
+\newcommand{\foncg}{}
+\newcommand{\fonch}{}
+
+\begin{document}
+
+%SWAMINATHAN Gurukandhamoorthi
+%Etude locale des fonctions
+
+\'Etude locale des fonctions\newline
+
+a) $\fonca$ et $\foncb$ au voisinage de $0$\newline
+
+\begin{eqnarray*}
+\lim_{x \rightarrow 0}\frac{\fonca}{\foncb}&=&-\infty\\
+\ln(1+u) &\underset{0}{\sim}& u \\
+ %comportement de ln
+ \mbox{Donc, } \foncb &\underset{0}{\sim}& 2x\\
+%$$ \mbox{D'où: } \frac{\fonca}{\foncb} \sim \frac{\ln x}{2} \mathop{\mathop{\rightarrow}_{x\rightarrow 0}}_{x>0}-\infty$$
+  \mbox{D'où: } \frac{\fonca}{\foncb} &\sim& \frac{\ln x}{2} \underset{x>0}{\underset{x\rightarrow 0}{\rightarrow}}-\infty\\
+  \mbox{Donc, } \frac{\foncb}{\fonca}&\rightarrow& 0\\
+   \mbox{Donc, } \foncb&=&o(\fonca) \mbox{ au } v(0)\\
+\end{eqnarray*}
+ b) comparer $\foncc$ et $\foncd$
+$$\lim_{x \rightarrow +\infty}\frac{\foncd}{\foncc}$$
+\begin{eqnarray*}
+                              \foncd&=& 2\sqrt{x^2+3x}\ln(x)\\
+                                    &=& 2x\sqrt{1+\frac{3}{x}}\ln(x)\\
+  \mbox{Donc, }\frac{\foncd}{\foncc}&=& 2\sqrt{1+\frac{3}{x}}\\
+\mbox{Donc le quotient est borné au }v(+\infty)\\
+  \mbox{Donc, } \foncd&=&o(\foncc) \mbox{ au } v(+\infty)\\
+\frac{\foncc}{\foncd} &\underset{x\rightarrow +\infty}{\rightarrow}& \frac{1}{2}\\
+ \mbox{Donc, } \foncc&=&o(\foncd) \mbox{ au } v(+\infty)\\
+\end{eqnarray*}
+
+c) $\fonce$ et $\foncf$ au voisinage de $-1$\newline
+$$\lim_{x \rightarrow +\infty}\frac{\foncf}{\fonce}$$
+On pose $u=1+x$\\
+$\fonce=\frac{1}{u}$ et $\foncf=\ln(1+\frac{1}{u-1})=\ln(\frac{u}{u-1})$ $u\rightarrow0^-$
+$$\lim_{u \rightarrow 0}\frac{\ln(\frac{u}{u-1})}{\frac{1}{u}}=0$$
+$$u\ln(\frac{u}{u-1})=u(\ln(-u)-\ln(1-u))\underset{u\rightarrow 0^-}{\rightarrow}0$$
+\begin{eqnarray*}
+\mbox{Donc, }\ln(\frac{u}{u-1})&=&o(\frac{1}{u}) \mbox{ au } v(0)\\
+\mbox{Donc, } \foncf&=&o(\fonce) \mbox{ au } v(-1)\\
+\end{eqnarray*}
+\end{document}
+
+
